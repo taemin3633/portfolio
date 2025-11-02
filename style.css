@@ -1,23 +1,22 @@
 /* ================================
-   🎨 Quant Portfolio Elegant Theme
+   💎 Quant Portfolio Refined Theme
    ================================ */
 * {
   box-sizing: border-box;
 }
 
-/* ===== 기본 ===== */
 body {
   margin: 0;
   font-family: 'Inter', 'Noto Sans KR', sans-serif;
   line-height: 1.7;
-  background-color: #0c0f18; /* 더 깊은 네이비 블랙 */
-  color: #e8eaed; /* 실버 톤의 본문색 */
+  background-color: #0d1117; /* 안정적인 네이비 블랙 */
+  color: #e6edf3;
   scroll-behavior: smooth;
 }
 
-/* ===== 헤더 ===== */
+/* ===== Header ===== */
 header {
-  background: rgba(14, 17, 27, 0.95);
+  background: rgba(13, 17, 23, 0.95);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -35,15 +34,13 @@ header {
   padding: 0 1.5rem;
 }
 
-/* 로고 색상 - 미드나잇 골드 포인트 */
 .logo {
-  color: #d4af37;
+  color: #6cb8ff; /* 고급스러운 소프트 블루 */
   font-weight: 700;
   font-size: 1.3rem;
   text-decoration: none;
 }
 
-/* ===== 네비게이션 ===== */
 .nav-links {
   list-style: none;
   display: flex;
@@ -53,33 +50,31 @@ header {
 .nav-links a {
   color: #cfd3dc;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #d4af37;
+  color: #6cb8ff;
 }
 
-/* ===== Hero 섹션 ===== */
+/* ===== Hero ===== */
 .hero {
   text-align: center;
   padding: 100px 20px 80px;
-  background: radial-gradient(circle at top, #141a2b, #0c0f18 70%);
+  background: radial-gradient(circle at top, #111a2b, #0d1117 70%);
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  color: #f8fafc;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+  font-size: 2.3rem;
+  color: #f5f7fa;
 }
 
 .hero .accent {
-  color: #d4af37; /* 골드 포인트 */
+  color: #6cb8ff;
 }
 
 .hero p {
-  color: #a9b3c8;
+  color: #aab4c3;
   font-size: 1.1rem;
   margin-top: 10px;
 }
@@ -87,21 +82,20 @@ header {
 .btn {
   display: inline-block;
   margin-top: 25px;
-  padding: 12px 28px;
-  background-color: #d4af37;
-  color: #0c0f18;
+  padding: 12px 26px;
+  background-color: #1f6feb;
+  color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #f5c542;
-  color: #0a0d14;
+  background-color: #388bff;
 }
 
-/* ===== About Me 섹션 ===== */
+/* ===== Section Base ===== */
 .section {
   padding: 80px 20px;
   max-width: 1000px;
@@ -112,10 +106,11 @@ header {
   font-size: 1.8rem;
   margin-bottom: 30px;
   color: #ffffff;
-  border-left: 4px solid #d4af37;
+  border-left: 4px solid #6cb8ff;
   padding-left: 10px;
 }
 
+/* ===== About Me ===== */
 .about-grid {
   display: flex;
   align-items: center;
@@ -128,7 +123,7 @@ header {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #d4af37;
+  border: 3px solid #6cb8ff;
 }
 
 .tags {
@@ -141,14 +136,14 @@ header {
 }
 
 .tags li {
-  background: rgba(212, 175, 55, 0.1);
-  color: #d4af37;
+  background: rgba(108, 184, 255, 0.12);
+  color: #6cb8ff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
-/* ===== Quant Models 섹션 ===== */
+/* ===== Quant Models ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -156,39 +151,39 @@ header {
 }
 
 .card {
-  background-color: #101523;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 22px;
   border-radius: 12px;
-  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
 .card h3 {
-  color: #d4af37;
+  color: #6cb8ff;
   margin-top: 0;
   font-weight: 600;
 }
 
 .card p {
-  color: #c9ccd3;
+  color: #cfd3dc;
 }
 
 .link {
   display: inline-block;
   margin-right: 10px;
-  color: #d4af37;
+  color: #6cb8ff;
   text-decoration: none;
   font-weight: 600;
 }
 
 .link:hover {
   text-decoration: underline;
-  color: #f5c542;
+  color: #8ecbff;
 }
 
 /* ===== Contact ===== */
@@ -235,11 +230,10 @@ footer {
 }
 
 footer a {
-  color: #d4af37;
+  color: #6cb8ff;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 footer a:hover {
-  color: #f5c542;
+  text-decoration: underline;
 }
