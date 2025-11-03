@@ -80,6 +80,18 @@ header {
     margin-top: 10px;
 }
 
+/* Hero 섹션 명언 스타일 */
+.hero .quote {
+    font-size: 1.15rem;
+    color: #aab4c3; 
+    margin: 30px auto 30px; /* 위 아래 여백 추가 */
+    max-width: 600px;
+    padding: 10px 0;
+    font-style: italic;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* 얇은 구분선 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .btn {
     display: inline-block;
     margin-top: 25px;
