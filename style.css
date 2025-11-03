@@ -1,239 +1,57 @@
-/* ================================
-   💎 Quant Portfolio Refined Theme
-   ================================ */
-* {
-  box-sizing: border-box;
-}
+/* style.css 파일 수정 */
 
+/* (1) 바디 배경: 순수한 블랙으로 대비 강화 */
 body {
-  margin: 0;
-  font-family: 'Inter', 'Noto Sans KR', sans-serif;
-  line-height: 1.7;
-  background-color: #0d1117; /* 안정적인 네이비 블랙 */
-  color: #e6edf3;
-  scroll-behavior: smooth;
+    /* ... 기타 속성 유지 ... */
+    background-color: #0A0A0A; /* 순수한 블랙 */ 
+    color: #e6edf3;
+    /* ... */
 }
 
-/* ===== Header ===== */
-header {
-  background: rgba(13, 17, 23, 0.95);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 1.5rem;
-}
-
+/* (2) 로고, 강조색, 링크 (Dark Cyan 적용) */
 .logo {
-  color: #6cb8ff; /* 고급스러운 소프트 블루 */
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-decoration: none;
+    color: #00CED1; /* 짙은 시안 */ 
+    /* ... */
 }
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #cfd3dc;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
 .nav-links a:hover {
-  color: #6cb8ff;
+    color: #00CED1; /* 짙은 시안 */
 }
-
-/* ===== Hero ===== */
-.hero {
-  text-align: center;
-  padding: 100px 20px 80px;
-  background: radial-gradient(circle at top, #111a2b, #0d1117 70%);
-}
-
-.hero h1 {
-  font-size: 2.3rem;
-  color: #f5f7fa;
-}
-
 .hero .accent {
-  color: #6cb8ff;
+    color: #00CED1; /* 짙은 시안 */
+}
+.section h2 {
+    /* ... */
+    border-left: 4px solid #00CED1; /* 짙은 시안 */
+    /* ... */
 }
 
-.hero p {
-  color: #aab4c3;
-  font-size: 1.1rem;
-  margin-top: 10px;
+/* (3) About Me 태그 */
+.avatar {
+    border: 3px solid #00CED1; /* 짙은 시안 */
+}
+.tags li {
+    background: rgba(0, 206, 209, 0.12); /* 짙은 시안의 투명 배경 */
+    color: #00CED1; /* 짙은 시안 */
+    /* ... */
 }
 
+/* (4) Quant Models 카드 헤딩 및 링크 */
+.card h3 {
+    color: #00CED1; /* 짙은 시안 */
+    /* ... */
+}
+.link {
+    color: #00CED1; /* 짙은 시안 */
+    /* ... */
+}
+
+/* (5) 버튼/CTA (진한 파랑 적용) */
 .btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 26px;
-  background-color: #1f6feb;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
+    /* ... */
+    background-color: #007FFF; /* 진한 파랑 */ 
+    /* ... */
 }
 
 .btn:hover {
-  background-color: #388bff;
-}
-
-/* ===== Section Base ===== */
-.section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #ffffff;
-  border-left: 4px solid #6cb8ff;
-  padding-left: 10px;
-}
-
-/* ===== About Me ===== */
-.about-grid {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #6cb8ff;
-}
-
-.tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-  padding: 0;
-}
-
-.tags li {
-  background: rgba(108, 184, 255, 0.12);
-  color: #6cb8ff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* ===== Quant Models ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background-color: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 22px;
-  border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
-}
-
-.card h3 {
-  color: #6cb8ff;
-  margin-top: 0;
-  font-weight: 600;
-}
-
-.card p {
-  color: #cfd3dc;
-}
-
-.link {
-  display: inline-block;
-  margin-right: 10px;
-  color: #6cb8ff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.link:hover {
-  text-decoration: underline;
-  color: #8ecbff;
-}
-
-/* ===== Contact ===== */
-.contact-form label {
-  display: block;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: #0f1524;
-  color: #e4e6eb;
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  height: 120px;
-}
-
-.actions {
-  margin-top: 15px;
-}
-
-.hint {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  display: block;
-  margin-top: 6px;
-}
-
-/* ===== Footer ===== */
-footer {
-  background-color: #0a0e18;
-  color: #9ca3af;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-footer a {
-  color: #6cb8ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+    background-color: #00BFFF; /* 호버 시 더 밝게 */
 }
