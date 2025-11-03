@@ -1,57 +1,365 @@
-/* style.css 파일 수정 */
+/* ================================
+    💎 Quant Portfolio Refined Theme (Dark Cyan Edition)
+    ================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /* 모든 요소의 기본 여백/패딩 초기화 */
+}
 
-/* (1) 바디 배경: 순수한 블랙으로 대비 강화 */
 body {
-    /* ... 기타 속성 유지 ... */
-    background-color: #0A0A0A; /* 순수한 블랙 */ 
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    background-color: #0A0A0A; /* 순수한 블랙으로 고급스러움 강화 */
     color: #e6edf3;
-    /* ... */
+    scroll-behavior: smooth;
 }
 
-/* (2) 로고, 강조색, 링크 (Dark Cyan 적용) */
-.logo {
-    color: #00CED1; /* 짙은 시안 */ 
-    /* ... */
+/* ===== Header & Nav ===== */
+header {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    color: #00CED1; /* 짙은 시안 (강조색) */
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #cfd3dc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
 .nav-links a:hover {
     color: #00CED1; /* 짙은 시안 */
 }
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: radial-gradient(circle at top, #0A1E2B, #0A0A0A 70%); /* 시안 계열 그라데이션 */
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    color: #f5f7fa;
+}
+
 .hero .accent {
     color: #00CED1; /* 짙은 시안 */
 }
-.section h2 {
-    /* ... */
-    border-left: 4px solid #00CED1; /* 짙은 시안 */
-    /* ... */
+
+.hero p {
+    color: #aab4c3;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-/* (3) About Me 태그 */
-.avatar {
-    border: 3px solid #00CED1; /* 짙은 시안 */
-}
-.tags li {
-    background: rgba(0, 206, 209, 0.12); /* 짙은 시안의 투명 배경 */
-    color: #00CED1; /* 짙은 시안 */
-    /* ... */
-}
-
-/* (4) Quant Models 카드 헤딩 및 링크 */
-.card h3 {
-    color: #00CED1; /* 짙은 시안 */
-    /* ... */
-}
-.link {
-    color: #00CED1; /* 짙은 시안 */
-    /* ... */
-}
-
-/* (5) 버튼/CTA (진한 파랑 적용) */
 .btn {
-    /* ... */
-    background-color: #007FFF; /* 진한 파랑 */ 
-    /* ... */
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 26px;
+    background-color: #007FFF; /* 진한 파랑 (CTA) */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #00BFFF; /* 호버 시 더 밝게 */
+    background-color: #00BFFF; /* 호버 시 밝게 */
+}
+
+/* ===== Section Base ===== */
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-left: 4px solid #00CED1; /* 짙은 시안 */
+    padding-left: 10px;
+}
+
+/* ===== About Me ===== */
+.about-grid {
+    display: flex;
+    align-items: flex-start; /* 상단 정렬 */
+    gap: 40px; /* 이미지와 텍스트 사이 간격 */
+    flex-wrap: wrap; 
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00CED1; /* 짙은 시안 */
+    flex-shrink: 0; /* 아바타 이미지가 줄어들지 않도록 고정 */
+}
+
+.about-grid > div {
+    flex-grow: 1; /* 남은 공간을 차지하도록 합니다. */
+    min-width: 250px; /* 텍스트 컨테이너 최소 너비 */
+}
+
+.tags {
+    list-style: none;
+    display: flex; /* 가로 정렬 */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.tags li {
+    background: rgba(0, 206, 209, 0.12); /* 짙은 시안의 투명 배경 */
+    color: #00CED1; /* 짙은 시안 */
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== Education & Experience (Timeline) ===== */
+.timeline {
+    padding: 0;
+}
+
+.timeline-item {
+    border-left: 2px solid #333; /* 왼쪽 줄 */
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.timeline-item h3 {
+    color: #00CED1; /* 짙은 시안 */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.timeline-item .date {
+    color: #aab4c3;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    list-style: disc; /* 목록 점 */
+    padding-left: 20px;
+}
+
+/* ===== Quant Models ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 22px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+    color: #00CED1; /* 짙은 시안 */
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.card p {
+    color: #cfd3dc;
+}
+
+.link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #00CED1; /* 짙은 시안 */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #4fe7e9;
+}
+
+/* ===== Contact ===== */
+.contact-form .row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111111;
+    color: #e4e6eb;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    display: block;
+    margin-top: 6px;
+}
+
+/* ===== Contact Form Status CSS (app.js 연동) ===== */
+.status {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status.ok {
+    background-color: #234327;
+    color: #4CAF50; 
+}
+
+.status.err {
+    background-color: #432323;
+    color: #F44336;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #000000;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer a {
+    color: #00CED1; /* 짙은 시안 */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Mobile Nav Toggle & Responsive Styles ===== */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00CED1; /* 짙은 시안 */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* 모바일 메뉴 토글 활성화 */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #0A0A0A; 
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .nav-links.open {
+        max-height: 300px; 
+        transition: max-height 0.4s ease-in;
+        padding-bottom: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    /* 모바일 About 섹션 정렬 변경 (레이아웃 파괴 해결) */
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-grid > div {
+        text-align: left; /* 텍스트 블록의 정렬 유지 */
+    }
+    .tags {
+        justify-content: center; /* 모바일에서 태그 중앙 정렬 */
+    }
+
+    /* 모바일 연락처 폼 정렬 */
+    .contact-form .row {
+        flex-direction: column;
+        gap: 0;
+    }
 }
